@@ -1,0 +1,36 @@
+class chngun : ChainGun replaces ChainGun {
+Default {
+  }
+  
+	States {
+		Select:
+			CHGN A 1 A_Raise(10);
+			loop;
+		DeSelect:
+			CHGN A 1 A_Lower(10);
+			loop;
+		
+		Fire:
+			CHGG A 0 A_Quake(2, 3, 0, 32, "");
+			CHGG A 0 A_PlaySound("weapons/chngun", CHAN_WEAPON);
+			CHGG A 0 A_GunFlash();
+			CHGG A 3 A_FireBullets(6.5, 0, 1, 4, "BulletPuff");
+			CHGG B 0 A_Quake(2, 3, 0, 32, "");
+			CHGG B 0 A_PlaySound("weapons/chngun", CHAN_WEAPON);
+			CHGG B 0 A_GunFlash("Flash2");
+			CHGG B 3 A_FireBullets(6.5, 0, 1, 4, "BulletPuff");
+			CHGG B 0 A_ReFire("FireLoop");
+			goto Ready;
+		FireLoop:
+			CHGG A 0 A_Quake(2, 3, 0, 32, "");
+			CHGG A 0 A_PlaySound("weapons/chngun", CHAN_WEAPON);
+			CHGG A 0 A_GunFlash();
+			CHGG A 2 A_FireBullets(6.5, 0, 1, 4, "BulletPuff");
+			CHGG B 0 A_Quake(2, 3, 0, 32, "");
+			CHGG B 0 A_PlaySound("weapons/chngun", CHAN_WEAPON);
+			CHGG B 0 A_GunFlash("Flash2");
+			CHGG B 2 A_FireBullets(6.5, 0, 1, 4, "BulletPuff");
+			CHGG B 0 A_ReFire("FireLoop");
+			Goto Ready;
+	}
+}

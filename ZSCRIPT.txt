@@ -1,0 +1,27 @@
+//Weapons
+#include "ZSCRIPT/WEAPONS/PISTOL"
+#include "ZSCRIPT/WEAPONS/SHOTGUN"
+#include "ZSCRIPT/WEAPONS/CHNGUN"
+//-------------------------------
+//Enemies
+#include "ZSCRIPT/ENEMIES/ZMAN"
+#include "ZSCRIPT/ENEMIES/SMAN"
+#include "ZSCRIPT/ENEMIES/PINKY"
+#include "ZSCRIPT/ENEMIES/IMPY"
+//-------------------------------
+
+class wgr : DoomPlayer {
+Default {
+  Player.StartItem "shtg";
+  Player.StartItem "Shell", 10;
+  }
+
+/*
+override void Tick() {
+	if (CheckInventory("shtgcd", 1)) {
+		TakeInventory("shtgcd", 1);
+	}
+	
+	Super.Tick();
+	}*/
+}

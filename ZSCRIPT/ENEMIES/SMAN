@@ -1,0 +1,21 @@
+class SMan : ShotgunGuy replaces ShotgunGuy {
+Default {
+  }
+  
+	States {
+		Death:
+			SPOS H 5 ACS_NamedExecute("shtgcd");
+			SPOS I 5 A_Scream();
+			SPOS J 5 A_NoBlocking();
+			SPOS K 5;
+			SPOS L -1;
+			stop;
+		XDeath:
+			SPOS M 5 ACS_NamedExecute("shtgcd");
+			SPOS N 5 A_XScream();
+			SPOS O 5 A_NoBlocking();
+			SPOS PQRST 5;
+			SPOS U -1;
+			stop;
+	}
+}

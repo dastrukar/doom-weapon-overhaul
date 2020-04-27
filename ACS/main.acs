@@ -1,0 +1,6 @@
+#library "main"
+#include "zcommon.acs"
+
+script "shtgcd" (void) {
+	TakeActorInventory(0, "shtgcd", 1);
+}

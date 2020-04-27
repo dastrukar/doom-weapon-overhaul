@@ -1,0 +1,15 @@
+class Pinky : Demon replaces Demon {
+Default {
+  }
+  
+	States {
+		Death:
+		SARG I 8 ACS_NamedExecute("shtgcd");
+		SARG J 8 A_Scream();
+		SARG K 4;
+		SARG L 4 A_NoBlocking();
+		SARG M 4;
+		SARG N -1;
+		stop;
+	}
+}

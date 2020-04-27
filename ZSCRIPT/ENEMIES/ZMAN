@@ -1,0 +1,22 @@
+class ZMan : ZombieMan replaces ZombieMan {
+Default {
+  
+  }
+	
+	States {
+		Death:
+			POSS H 5 ACS_NamedExecute("shtgcd");
+			POSS I 5 A_Scream();
+			POSS J 5 A_NoBlocking();
+			POSS K 5;
+			POSS L -1;
+			stop;
+		XDeath:
+			POSS M 5 ACS_NamedExecute("shtgcd");
+			POSS N 5 A_XScream();
+			POSS O 5 A_NoBlocking();
+			POSS PQRST 5;
+			POSS U -1;
+			stop;
+	}
+}

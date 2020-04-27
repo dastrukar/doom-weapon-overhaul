@@ -1,0 +1,22 @@
+class HG : Pistol replaces Pistol {
+Default {
+  Inventory.PickupMessage "dastrukar would like to speak with you.";
+  }
+	States {
+		Select:
+			PISG A 1 A_Raise(10);
+			loop;
+		
+		DeSelect:
+			PISG A 1 A_Lower(10);
+			loop;
+		
+		Fire:
+			PISG A 2;
+			PISG B 4 A_FirePistol();
+			PISG C 2;
+			PISG B 4 A_ReFire();
+			goto Ready;
+	}
+}
+//this weapon shouldn't be obtainable.
