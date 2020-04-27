@@ -14,6 +14,9 @@ class wgr : DoomPlayer {
 Default {
   Player.StartItem "shtg";
   Player.StartItem "Shell", 10;
+  
+  Player.WeaponSlot 1, "shtg";
+  Player.WeaponSlot 2, "chngun";
   }
 
 /*

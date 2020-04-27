@@ -4,10 +4,10 @@ Default {
   
 	States {
 		Select:
-			CHGN A 1 A_Raise(10);
+			CHGG A 1 A_Raise(10);
 			loop;
 		DeSelect:
-			CHGN A 1 A_Lower(10);
+			CHGG A 1 A_Lower(10);
 			loop;
 		
 		Fire:
